@@ -104,7 +104,7 @@ func WithResponseHandler(rh ResponseHandler) Option {
 
 // Make makes the request and manages any returned result.
 func (b *builder) Make(ctx context.Context, target any) (*http.Response, error) {
-	b.req.WithContext(ctx)
+	b.req = b.req.WithContext(ctx)
 	resp, err := b.client.Do(b.req)
 	if err != nil {
 		return nil, err
