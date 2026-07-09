@@ -2,4 +2,4 @@ module github.com/catlee993/go-request
 
 go 1.20
 
-require github.com/golang/mock v1.6.0 // indirect
+require github.com/golang/mock v1.6.0
